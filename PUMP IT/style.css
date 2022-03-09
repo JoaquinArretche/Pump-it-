@@ -1,0 +1,526 @@
+/*============ Google fonts ============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*======= CSS variables =======*/
+:root{
+  --white-color: #fff;
+  --dark-color: #222;
+  --body-bg-color: #fff;
+  --section-bg-color: #202834;
+  --navigation-item-hover-color: #3b5378;
+
+  --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+  --scroll-bar-color: #fff;
+  --scroll-thumb-color: #282f4e;
+  --scroll-thumb-hover-color: #454f6b;
+}
+
+/*======= CSS variables =======*/
+:root{
+    --white-color: #fff;
+    --dark-color: #222;
+    --body-bg-color: #fff;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+  
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  
+    --scroll-bar-color: rgba(0, 0, 0, 0.1);
+    --scroll-thumb-color: rgb(207, 170, 69);
+    --scroll-thumb-hover-color: #454f6b;
+  }
+  
+  /*======= Scroll bar =======*/
+  ::-webkit-scrollbar{
+    width: 11px;
+    background: var(--scroll-bar-color);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: var(--scroll-thumb-color);
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: var(--scroll-thumb-hover-color);
+  }
+
+/*======= Scroll bar =======*/
+::-webkit-scrollbar{
+  width: 11px;
+  background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb{
+  width: 100%;
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--scroll-thumb-hover-color);
+}
+
+/*======= Main CSS =======*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: black;
+}
+
+section{
+  position: relative;
+}
+
+.section{
+  color: var(--white-color);
+  background: var(--section-bg-color);
+  padding: 35px 200px;
+  transition: 0.3s ease;
+}
+
+
+/*======= Header =======*/
+header{
+    margin-top: 45px;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease;
+    transition-property: height, background;
+  }
+  
+  header.sticky{
+    height: calc(2.5rem + 1rem);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  header .nav-bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    transition: 0.3s ease;
+  }
+  
+  .nav-close-btn, .nav-menu-btn{
+    display: none;
+  }
+  
+  .nav-bar .logo{
+    color: var(--white-color);
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+  }
+  
+  .navigation .nav-items a{
+    color: var(--white-color);
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+  }
+  
+  .navigation .nav-items a i{
+    display: none;
+  }
+  
+  .navigation .nav-items a:not(:last-child){
+    margin-right: 45px;
+  }
+  
+  /* Banner Image */
+.banner_image{
+	background: url("/images/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg") no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: rgb(207, 170, 69);
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	margin-bottom: 15px;
+    font-size: 80px;
+}
+
+.banner_content2{
+	text-align: center;
+	color: rgb(207, 170, 69);
+    margin-top: 50px;
+}
+.banner_content2 h1{
+	text-transform: uppercase;
+	margin-bottom: 15px;
+    font-size: 40px;
+}
+/*Styles for product card*/
+.product .product-card{
+    background: #1D212B;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    border-radius: 10px;
+  }
+  
+  .product .product-card:before{
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .product .product-card .product-img{
+    z-index: 1;
+    position: absolute;
+    max-width: 350px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .product .product-card .name{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 130px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .product .product-card .price{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 80px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .product .product-card .popup-btn{
+    z-index: 2;
+    color: #fff;
+    background: #555;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /*Styles for popup view*/
+  
+  .product .popup-view{
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .price2{
+      font-size: 15px;
+  }
+  
+  .product .popup-view.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .product .popup-card{
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+  }
+  
+  .product .popup-card .product-img{
+    z-index: 2;
+    background: #1D212B;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    transform: translateY(25px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .product .popup-card .product-img img{
+    z-index: 2;
+    position: relative;
+    width: 450px;
+    left: -50px;
+  }
+  
+  .product .popup-card .info{
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .product .popup-card .close-btn{
+    color: #555;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .product .popup-card .info h2{
+    font-size: 40px;
+    line-height: 20px;
+    margin: 10px;
+  }
+  
+  .product .popup-card .info h2 span{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .product .popup-card .info p{
+    font-size: 15px;
+    margin: 10px;
+  }
+  
+  .product .popup-card .info .price{
+    font-size: 45px;
+    font-weight: 300;
+    margin: 10px;
+  }
+  
+  .product .popup-card .info .add-cart-btn{
+    color: #fff;
+    background: rgb(207, 170, 69);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius: 20px;
+  }
+  
+  .product .popup-card .info .add-wish{
+    color: rgb(207, 170, 69);
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2%;
+  }
+  
+  /*Responsive styles*/
+  
+  @media (max-width: 900px){
+    .product .popup-card{
+      flex-direction: column;
+      width: 550px;
+      height: auto;
+    }
+  
+    .product .popup-card .product-img{
+      z-index: 3;
+      width: 100%;
+      height: 200px;
+      transform: translateY(0);
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  
+    .product .popup-card .product-img img{
+      left: initial;
+      max-width: 100%;
+    }
+  
+    .product .popup-card .info{
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  
+    .product .popup-card .info h2{
+      margin: 20px 5px 5px 5px;
+      font-size: 25px;
+    }
+  
+    .product .popup-card .info h2 span{
+      font-size: 10px;
+    }
+  
+    .product .popup-card .info p{
+      margin: 5px;
+      font-size: 13px;
+    }
+  
+    .product .popup-card .info .price{
+      margin: 5px;
+      font-size: 30px;
+    }
+  
+    .product .popup-card .info .add-cart-btn{
+      margin: 5px auto;
+      padding: 5px 40px;
+      font-size: 14px;
+    }
+  
+    .product .popup-card .info .add-wish{
+      font-size: 14px;
+    }
+  
+    .product .popup-card .close-btn{
+      z-index: 4;
+    }
+  }
+
+  .about,
+  .contactus,
+  .ourteam{
+      padding: 5% 10%;
+      text-align: center;
+  }
+
+  /* Contact Us */
+.form_input{
+	margin-bottom: 15px;
+}
+
+.form_input input[type="text"]{
+	width: 550px;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form_input textarea{
+	width: 550px;
+	padding: 12px 20px;
+	height: 80px;
+	resize: none;
+	border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn a{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid rgb(207, 170, 69);
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: rgb(207, 170, 69);
+	text-align: center;
+    border-radius: 10px;
+}
+
+* Our Team*/
+.ourteam{
+	background: #f5f5f5;
+    
+}
+
+.ourteam_wrapper .team{
+	display: flex;
+	justify-content: space-between;
+    
+}
+
+.ourteam_wrapper .team-1.team{
+	margin-bottom: 25px;
+    
+}
+
+.ourteam_wrapper .team_member{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.ourteam_wrapper .team_member img{
+	width: 100%;
+	display: block;
+	height: auto;
+	transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+.ourteam_wrapper .team_member:hover img{
+	transform: scale(1.1);
+}
